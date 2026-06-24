@@ -1,0 +1,471 @@
+/* ==========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações do fundo e layout para segurar o footer embaixo */
+body {
+    background-color: #1a1a24;
+    color: #f4f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Caixa principal que limita a largura do conteúdo nas páginas */
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* ==========================================
+   2. CABEÇALHO (MENU) E RODAPÉ
+   ========================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242433;
+    padding: 20px 10%;
+    border-bottom: 2px solid #8b5cf6; 
+}
+
+.cabecalho .title {
+    font-size: 1.5rem;
+}
+
+/* Links de navegação do topo */
+.links {
+    color: #00ffc4;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.links:hover, .links.ativo {
+    color: #8b5cf6;
+}
+
+/* Rodapé fixado no final da tela */
+footer {
+    background-color: #242433;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    border-top: 2px solid #8b5cf6; 
+}
+
+/* ==========================================
+   3. PÁGINA INICIAL (HERO & SKILLS)
+   ========================================== */
+/* Layout lado a lado (Texto e Foto) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h2, .titulo-projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Destaque neon para o seu nome/palavras-chave */
+h2 i, h3 i {
+    color: #00ffc4;
+    font-style: normal;
+}
+
+.subtitulo {
+    color: #8b5cf6;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+/* Foto de perfil redonda */
+.hero-foto img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid #8b5cf6;
+    object-fit: cover;
+}
+
+/* Botões de chamada para ação (CTA) */
+.botoes-cta {
+    display: flex;
+    gap: 15px;
+}
+
+.botao-principal {
+    background-color: #00ffc4;
+    color: #1a1a24;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: #8b5cf6;
+    color: #fff;
+}
+
+.botao-secundario {
+    border: 2px solid #8b5cf6;
+    color: #8b5cf6;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.botao-secundario:hover {
+    background-color: #8b5cf6;
+    color: #fff;
+}
+
+/* Seção de Habilidades (Tags) */
+.skills-section {
+    text-align: center;
+}
+
+.skills-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: #242433;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #3f3f56;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   4. PÁGINA DE PROJETOS
+   ========================================== */
+.titulo-projetos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Card splitado em duas colunas (Imagem | Texto) */
+.projeto-card {
+    background-color: #242433;
+    border-radius: 8px;
+    border-left: 4px solid #00ffc4;
+    display: flex;
+    overflow: hidden; 
+    gap: 25px;
+}
+
+/* Imagem redimensionada do projeto */
+.projeto-imagem {
+    flex: 1;
+    max-width: 220px;
+    min-height: 160px;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bloco de textos do projeto */
+.projeto-conteudo {
+    flex: 2;
+    padding: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projeto-categoria {
+    color: #8b5cf6;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.projeto-conteudo h3 {
+    margin: 5px 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.projeto-conteudo p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* Alinha as tags dos projetos à esquerda */
+.projeto-conteudo .skills-container {
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.projeto-conteudo .skill-card {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+}
+
+/* Botão vazado do GitHub */
+.projeto-links {
+    margin-top: 15px;
+}
+
+.botao-github {
+    display: inline-block;
+    background-color: transparent;
+    color: #00ffc4;
+    border: 1px solid #00ffc4;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.botao-github:hover {
+    background-color: #00ffc4;
+    color: #1a1a24;
+}
+
+/* ==========================================
+   5. ANIMAÇÕES (EFEITOS VISUAIS)
+   ========================================== */
+/* Animação de subida suave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito pulso de brilho no nome */
+@keyframes neonGlow {
+    0%, 100% {
+        text-shadow: 0 0 4px rgba(0, 255, 196, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 12px rgba(0, 255, 196, 0.6);
+    }
+}
+
+/* Aplica a entrada suave nas seções ao carregar */
+.hero-section, .titulo-projetos, .projeto-card {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Aplica o brilho contínuo no seu nome */
+h2 i {
+    animation: neonGlow 3s infinite ease-in-out;
+}
+
+/* Efeito cascata para as seções secundárias */
+.skills-section, .container-projetos {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+/* ==========================================
+   6. RESPONSIVIDADE (TELA DE CELULAR)
+   ========================================== */
+@media (max-width: 768px) {
+    .cabecalho, .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .hero-foto {
+        order: -1; /* Joga a foto para cima no mobile */
+    }
+    .botoes-cta {
+        justify-content: center;
+    }
+    
+    /* Ajusta os cards de projetos para empilharem verticalmente */
+    .projeto-card {
+        flex-direction: column;
+        gap: 0;
+    }
+    .projeto-imagem {
+        max-width: 100%;
+        height: 180px;
+    }
+    .projeto-conteudo {
+        padding: 20px;
+    }
+}
+/* ==========================================
+   7. PÁGINA DE CONTATO (FORMULÁRIO E INFOS)
+   ========================================== */
+
+/* Define o layout dividindo em duas colunas (Informações | Formulário) */
+.container-contato {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+/* Coluna de informações à esquerda */
+.contato-info {
+    flex: 1;
+}
+
+.contato-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contato-info p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estiliza cada linha de rede social */
+.item-contato {
+    background-color: #242433;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #8b5cf6;
+}
+
+.item-contato strong {
+    color: #8b5cf6;
+    margin-right: 8px;
+}
+
+.item-contato a {
+    color: #00ffc4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.item-contato a:hover {
+    color: #f4f4f6;
+}
+
+/* Coluna do Formulário à direita */
+.contato-formulario {
+    flex: 1;
+    background-color: #242433;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid #00ffc4; /* Detalhe em ciano no topo do formulário */
+}
+
+/* Organização de cada bloco de campo */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Estilização comum para Inputs e Textarea */
+.grupo-campo input,
+.grupo-campo textarea {
+    background-color: #1a1a24; /* Fundo idêntico ao do site */
+    border: 1px solid #3f3f56;
+    color: #f4f4f6;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito incrível de foco quando o usuário clica no campo */
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    border-color: #00ffc4;
+    box-shadow: 0 0 8px rgba(0, 255, 196, 0.2);
+}
+
+/* Ajusta o botão de envio para ocupar 100% da largura do formulário */
+.contato-formulario .botao-principal {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Ajustes de animação para a página de contato */
+.titulo-contato, .contato-info, .contato-formulario {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.contato-formulario {
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+/* Garante que tudo vire uma coluna única em telas de celular */
+@media (max-width: 768px) {
+    .container-contato {
+        flex-direction: column;
+        gap: 35px;
+    }
+}

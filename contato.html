@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Gustavo Fernandes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="title">Gustavo Fernandes</h1>
+        <nav>
+            <a class="links" href="./index.html">Página inicial</a>
+            <a class="links" href="./projetos.html">Meus projetos</a>
+            <a class="links ativo" href="./contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="titulo-contato">
+            <h2>Vamos <i>Conversar?</i></h2>
+            <p class="subtitulo">Sinta-se à vontade para me mandar uma mensagem ou me encontrar nas redes sociais.</p>
+        </section>
+
+        <section class="container-contato">
+            <div class="contato-info">
+                <h3>Canais de Contato</h3>
+                <p>Estou disponível para propostas de trabalho, projetos freelancers ou apenas para trocar uma ideia sobre desenvolvimento!</p>
+                
+                <div class="lista-contatos">
+                    <div class="item-contato">
+                        <strong>E-mail:</strong>
+                        <a href="mailto:gustavoffernades1408@gmail.com">gustavoffernades1408@gmail.com</a>
+                    </div>
+                    <div class="item-contato">
+                        <strong>LinkedIn:</strong>
+                        <a href="https://linkedin.com/in/seu-perfil" target="_blank">Gustavo Fernandes</a>
+                    </div>
+                    <div class="item-contato">
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/Gust-75" target="_blank">github.com/Gust-75</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contato-formulario">
+                <form action="#" method="POST">
+                    <div class="grupo-campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-principal">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Gustavo Fernandes | Desenvolvedor Junior</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
